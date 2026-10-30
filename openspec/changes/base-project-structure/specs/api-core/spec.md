@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Define la API REST base con controladores, middleware, validación, manejo de errores, versionado, documentación OpenAPI/Swagger y health checks.
+Define la API REST base con controladores, middleware, validación, manejo de errores, versionado, documentación OpenAPI/Scalar y health checks.
 
 ## ADDED Requirements
 
@@ -47,11 +47,11 @@ El sistema DEBE implementar middleware global que capture excepciones y retorne 
 - **WHEN** recurso no existe
 - **THEN** responde 404 con ProblemDetails
 
-### Requirement: Documentación OpenAPI/Swagger
+### Requirement: Documentación OpenAPI/Scalar
 El sistema DEBE generar especificación OpenAPI 3.1 completa con ejemplos, esquemas de autenticación y agrupación por tags.
 
-#### Scenario: Swagger UI accesible
-- **WHEN** se navega a /swagger en desarrollo
+#### Scenario: Scalar UI accesible
+- **WHEN** se navega a /scalar en desarrollo
 - **THEN** UI carga con todos los endpoints documentados
 
 #### Scenario: Esquema de autenticación documentado

@@ -22,7 +22,7 @@ El CRM dental necesita una estructura base de proyecto bien definida para ASP.NE
 - `project-structure`: Estructura base de la solución .NET y proyecto React, arquitectura en capas, configuración de build y tooling
 - `data-access`: Capa de persistencia con Entity Framework Core, migraciones, repositorios y unidad de trabajo
 - `authentication`: Autenticación y autorización con JWT, ASP.NET Core Identity, roles y permisos
-- `api-core`: API REST base con controladores, middleware, validación, manejo de errores y documentación OpenAPI/Swagger
+- `api-core`: API REST base con controladores, middleware, validación, manejo de errores y documentación OpenAPI/Scalar
 
 ### Capacidades Modificadas
 

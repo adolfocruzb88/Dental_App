@@ -34,14 +34,14 @@
 - [ ] 4.7 Crear migración inicial `InitialCreate` y seed data (roles, usuario admin por defecto) — verificar `dotnet ef database update` crea schema correcto
 - [ ] 4.8 Implementar `IEmailService` con proveedor configurable (SMTP/Mailhog para dev) — verificar test de envío email
 
-## 5. Backend: API (Controllers, Middleware, Swagger, Health)
+## 5. Backend: API (Controllers, Middleware, Scalar, Health)
 
-- [ ] 5.1 Configurar `Program.cs`: DI, MediatR, EF Core, Identity, JWT Bearer, CORS, Serilog, HealthChecks, Swagger — verificar `dotnet run` inicia sin errores
+- [ ] 5.1 Configurar `Program.cs`: DI, MediatR, EF Core, Identity, JWT Bearer, CORS, Serilog, HealthChecks, Scalar — verificar `dotnet run` inicia sin errores
 - [ ] 5.2 Implementar middleware global de excepciones que retorna ProblemDetails (RFC 7807) con traceId — verificar test: excepción → 500 ProblemDetails
 - [ ] 5.3 Configurar autenticación JWT: `AddJwtBearer` con validación de issuer, audience, lifetime; refresh token en cookie HttpOnly — verificar test: login → access token + refresh cookie
 - [ ] 5.4 Implementar endpoints Auth: `POST /api/v1/auth/login`, `POST /api/v1/auth/refresh`, `POST /api/v1/auth/logout`, `POST /api/v1/auth/forgot-password`, `POST /api/v1/auth/reset-password` — verificar tests de integración auth flow
 - [ ] 5.5 Implementar policies de autorización basadas en claims de permisos (`patients.read`, `patients.write`, `appointments.*`, `billing.*`, `admin.*`) — verificar test: usuario sin permiso → 403
-- [ ] 5.6 Configurar Swagger/OpenAPI 3.1 con security schemes (BearerAuth, CookieAuth), XML comments, UI en `/swagger` (solo Development) — verificar `/swagger/v1/swagger.json` válido
+- [ ] 5.6 Configurar Scalar/OpenAPI 3.1 con security schemes (BearerAuth, CookieAuth), XML comments, UI en `/scalar` (solo Development) — verificar `/openapi/v1.json` válido
 - [ ] 5.7 Configurar Health Checks: `/health` (liveness), `/health/ready` (readiness con DB check), HealthChecksUI en `/health-ui` (Development) — verificar endpoints responden correctamente
 - [ ] 5.8 Implementar request logging middleware con correlation ID (X-Request-Id header o generado) — verificar logs incluyen correlation ID
 - [ ] 5.9 Crear controladores base: `BaseApiController` con helpers para ProblemDetails, paginación cursor-based — verificar test de paginación
